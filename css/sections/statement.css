@@ -1,0 +1,28 @@
+.statement {
+  display: flex;
+  align-items: center;
+  min-height: 720px;
+  background: var(--primary-900);
+}
+
+.statement__text {
+  max-width: 1088px;
+  margin-inline: auto;
+  color: var(--secondary-400);
+  font-family: var(--font-serif);
+  font-size: 60px;
+  font-style: italic;
+  font-weight: 600;
+  line-height: normal;
+  text-align: center;
+}
+
+@media (max-width: 768px) {
+  .statement {
+    min-height: 480px;
+  }
+
+  .statement__text {
+    font-size: 36px;
+  }
+}

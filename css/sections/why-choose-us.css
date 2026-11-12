@@ -1,0 +1,266 @@
+.why {
+  padding: 120px 0 80px;
+  background: var(--cream);
+}
+
+.why__inner {
+  display: flex;
+  flex-direction: column;
+  gap: 64px;
+}
+
+.why__header {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 20px;
+}
+
+.why__headline {
+  color: var(--grey-black);
+}
+
+.why__headline .headline__accent {
+  color: var(--primary-500);
+}
+
+.why__grid {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.why__row {
+  display: flex;
+  gap: 16px;
+}
+
+.why__row--top {
+  height: 520px;
+}
+
+.why__column {
+  display: flex;
+  flex: 1 0 0;
+  flex-direction: column;
+  gap: 16px;
+  min-width: 0;
+}
+
+/* Card base */
+.why-card {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  border-radius: 24px;
+  background: var(--white);
+  /* Inside stroke (like Figma): drawn over content without taking layout space */
+  outline: 1px solid var(--card-border);
+  outline-offset: -1px;
+}
+
+.why-card__heading {
+  display: flex;
+  flex-direction: column;
+}
+
+.why-card__heading--numbered {
+  gap: 8px;
+}
+
+.why-card__number {
+  color: var(--primary-500);
+  font-family: var(--font-serif);
+  font-size: 24px;
+  font-weight: 700;
+  line-height: 32px;
+}
+
+.why-card__title {
+  color: var(--ink-strong);
+  font-family: var(--font-serif);
+  font-size: 48px;
+  font-weight: 700;
+  line-height: 56px;
+}
+
+.why-card__subtitle {
+  color: var(--grey-low);
+}
+
+.why-card__text {
+  color: var(--grey-black);
+}
+
+/* Precision (image card) */
+.why-card--precision {
+  flex: 0 0 560px;
+  overflow: hidden;
+}
+
+.why-card__image {
+  width: 100%;
+  height: 280px;
+  object-fit: cover;
+}
+
+.why-card__body {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+  padding: 32px;
+}
+
+/* Expertise + Complete Care */
+.why-card--padded {
+  flex: 1 0 0;
+  justify-content: center;
+  gap: 24px;
+  padding: 32px;
+}
+
+.why-card__pills {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+
+.why-card__pills li {
+  padding: 7px 14px;
+  border: 1px solid var(--primary-500);
+  border-radius: 100px;
+  background: #f0faf8;
+  color: var(--primary-500);
+  font-size: 12px;
+  line-height: 18px;
+  white-space: nowrap;
+}
+
+/* Personalised */
+.why-card--personalised {
+  flex: 0 0 842px;
+  flex-direction: row;
+  align-items: flex-end;
+  height: 220px;
+  padding: 32px;
+}
+
+.why-card__personalised-left {
+  flex: 0 0 329px;
+}
+
+.why-card__personalised-left .why-card__subtitle {
+  width: 258px;
+}
+
+.why-card__divider {
+  position: absolute;
+  top: 97px;
+  left: 360px;
+  width: 1px;
+  height: 100px;
+  opacity: 0.6;
+  background: linear-gradient(to bottom, rgba(86, 245, 214, 0), var(--primary-500), rgba(86, 245, 214, 0));
+}
+
+.why-card__personalised-right {
+  display: flex;
+  flex: 1 0 0;
+  flex-direction: column;
+  justify-content: flex-end;
+  height: 152px;
+  padding-left: 40px;
+}
+
+/* CTA block */
+.why-cta {
+  display: flex;
+  flex: 1 0 0;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: center;
+  gap: 16px;
+  height: 220px;
+  padding: 24px;
+  border-radius: 24px;
+  background: var(--primary-800);
+}
+
+.why-cta__headline {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+  font-family: var(--font-serif);
+  font-size: 28px;
+  font-weight: 700;
+  line-height: 32px;
+}
+
+.why-cta__lead {
+  color: var(--white);
+}
+
+.why-cta__accent {
+  color: var(--primary-300);
+}
+
+@media (max-width: 1200px) {
+  .why__row--top {
+    height: auto;
+  }
+
+  .why-card--precision {
+    flex-basis: 45%;
+  }
+
+  .why-card--personalised {
+    flex-basis: 65%;
+  }
+}
+
+@media (max-width: 960px) {
+  .why__row {
+    flex-direction: column;
+  }
+
+  .why-card--precision,
+  .why-card--personalised {
+    flex-basis: auto;
+  }
+
+  .why-card--personalised {
+    flex-direction: column;
+    align-items: stretch;
+    gap: 24px;
+    height: auto;
+  }
+
+  .why-card__personalised-left {
+    flex-basis: auto;
+  }
+
+  .why-card__divider {
+    display: none;
+  }
+
+  .why-card__personalised-right {
+    height: auto;
+    padding-left: 0;
+  }
+
+  .why-cta {
+    height: auto;
+    padding: 32px;
+  }
+}
+
+@media (max-width: 768px) {
+  .why {
+    padding-top: 80px;
+  }
+
+  .why-card__title {
+    font-size: 36px;
+    line-height: 44px;
+  }
+}
